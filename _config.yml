@@ -3,7 +3,8 @@ name: 'Davi Figueiredo'
 description: 'I built a blog so I can tell my story and help others.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
-baseurl: '/blog'
+
+baseurl: ''
 email: 'davi.mello.28@gmail.com'
 
 include: ["_pages"]
@@ -23,6 +24,7 @@ authors:
       avatar:         https://avatars2.githubusercontent.com/u/3607502?s=460
       bio:            "IT Manager and Full-Stack Developer, enthusiast of decentralization. Designer, musician, and bodybuilder in free time."
       email:          davi.mello.28@gmail.com
+      mastodon:       https://mastodon.social/@davifigueiredo
 
  
 # Defaults
