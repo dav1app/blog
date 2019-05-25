@@ -59,7 +59,7 @@ description: "This is just a blog."
                 {% if second_post.image %}
                 <div class="col-md-4">
                 <a href="{{site.baseurl}}{{second_post.url}}">
-                 <img class="w-100" src="{{ second_post.image | absolute_url }}" alt="{{ second_post.title }}">
+                 <img class="w-100" src="{{site.baseurl}}{{second_post.image}}" alt="{{ second_post.title }}">
                 </a>
                 </div>
                 {% endif %}                
