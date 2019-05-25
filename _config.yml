@@ -4,7 +4,7 @@ description: 'I built a blog so I can tell my story and help others.'
 logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.ico'
 
-baseurl: ''
+baseurl: 'https://davifigueiredo.com.br'
 email: 'davi.mello.28@gmail.com'
 
 include: ["_pages"]
