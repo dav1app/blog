@@ -59,7 +59,7 @@ description: "This is just a blog."
                 {% if second_post.image %}
                 <div class="col-md-4">
                 <a href="{{site.baseurl}}{{second_post.url}}">
-                 <img class="w-100" src="{{site.baseurl}}{{second_post.image}}" alt="{{ second_post.title }}">
+                 <img class="w-100" src="{{second_post.image}}" alt="{{ second_post.title }}">
                 </a>
                 </div>
                 {% endif %}                
@@ -90,7 +90,7 @@ description: "This is just a blog."
                 {% if third_post.image %}
                 <div class="col-md-4">
                 <a href="{{site.baseurl}}{{third_post.url}}">
-                 <img class="w-100" src="{{site.baseurl}}/{{ third_post.image }}" alt="{{ third_post.title }}">
+                 <img class="w-100" src="{{ third_post.image }}" alt="{{ third_post.title }}">
                 </a>
                 </div>
                 {% endif %}                
@@ -121,7 +121,7 @@ description: "This is just a blog."
                 {% if fourth_post.image %}
                 <div class="col-md-4">
                 <a href="{{site.baseurl}}{{fourth_post.url}}">
-                <img class="w-100" src="{{site.baseurl}}/{{ fourth_post.image }}" alt="{{ fourth_post.title }}">
+                <img class="w-100" src="{{ fourth_post.image }}" alt="{{ fourth_post.title }}">
                 </a>
                 </div>
                 {% endif %}                
