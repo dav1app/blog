@@ -25,12 +25,17 @@ layout: default
                         {% endif %}
 						<small class="ml-3"> {{ author.name }} <span>
 
-                            {% if author.twitter %}<a target="_blank" href="{{ author.twitter }}" class="btn btn-outline-success btn-sm btn-round ml-1">{% endif %}
-                            {% if author.mastodon %}<a target="_blank" href="{{ author.mastodon }}" class="btn btn-outline-primary btn-sm btn-round ml-1">{% endif %}
+                            {% if author.twitter %}
+                                <a target="_blank" href="{{ author.twitter }}" class="btn btn-outline-success btn-sm btn-round ml-1"><i class="fab fa-twitter" aria-hidden="true"></i> Follow</a></span>
+                            {% endif %}
+
+                            {% if author.mastodon %}
+                                <a target="_blank" href="{{ author.mastodon }}" class="btn btn-outline-primary btn-sm btn-round ml-1"><i class="fab fa-mastodon" aria-hidden="true"></i> Follow</a></span>
+                            {% endif %}
 
 
 
-                        Follow</a></span>
+                       
                             
 
                             <span class="text-muted d-block mt-1">{{ page.date | date: '%b %d, %Y' }} · {% include meta-read-time.html %}</span>
