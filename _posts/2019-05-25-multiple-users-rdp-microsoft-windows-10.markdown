@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Enabling multiple users in RDP on Microsoft Windows 10."
-image: assets/images/windows-10-logo.png
+image: /assets/images/windows-10-logo.png
 ---
 Before anything else, **do NOT download any already patched `termsrv.dll` files available on the web!** Microsoft is constantly updating those files, and since Windows 10 has a lot of versions, it is possible that you're going to break your files. I compared some files from the 1809 october version and the patched files available on the web, and they differ a lot. 
 

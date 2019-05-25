@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Lessons I've learned as a CTO of blockchain based bank."
-image: assets/images/octabank-logo.png
+image: /assets/images/octabank-logo.png
 ---
 Four months ago I left the role as a CTO and founder of Octabank, an investment bank that tries to use almost every safety and decentralization feature on its process.
 
