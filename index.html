@@ -67,6 +67,7 @@ description: "This is just a blog."
                     <h2 class="mb-2 h6 font-weight-bold">
                     <a class="text-dark" href="{{site.baseurl}}{{second_post.url}}">{{ second_post.title }}</a>
                     </h2>
+                    {% if second_post.categories.size > 0%}
                     <small class="d-block text-muted">
                         In <span class="catlist">
                         {% for category in second_post.categories %}
@@ -74,6 +75,7 @@ description: "This is just a blog."
                         {% endfor %}
                         </span>                   
                     </small>
+                    {% endif %}
                     <small class="text-muted">
                         {{ second_post.date | date: '%b %d, %Y' }}
                     </small>
@@ -83,7 +85,7 @@ description: "This is just a blog."
 
         <!-- third latest post -->
         {%- assign third_post = site.posts[2] -%}
-        {% if site.posts[1] %}        
+        {% if site.posts[2] %}        
         <div class="mb-3 d-flex align-items-center">                
                 {% if third_post.image %}
                 <div class="col-md-4">
@@ -96,6 +98,7 @@ description: "This is just a blog."
                     <h2 class="mb-2 h6 font-weight-bold">
                     <a class="text-dark" href="{{site.baseurl}}{{third_post.url}}">{{ third_post.title }}</a>
                     </h2>
+                    {% if third_post.categories.size > 0 %}
                     <small class="d-block text-muted">
                         In <span class="catlist">
                         {% for category in third_post.categories %}
@@ -103,6 +106,7 @@ description: "This is just a blog."
                         {% endfor %}
                         </span>                   
                     </small>
+                    {% endif %}
                     <small class="text-muted">
                         {{ third_post.date | date: '%b %d, %Y' }}
                     </small>
@@ -112,7 +116,7 @@ description: "This is just a blog."
 
         <!-- fourth latest post -->
         {%- assign fourth_post = site.posts[3] -%}
-        {% if site.posts[1] %}           
+        {% if site.posts[3] %}           
         <div class="mb-3 d-flex align-items-center">                
                 {% if fourth_post.image %}
                 <div class="col-md-4">
@@ -125,6 +129,8 @@ description: "This is just a blog."
                     <h2 class="mb-2 h6 font-weight-bold">
                     <a class="text-dark" href="{{site.baseurl}}{{fourth_post.url}}">{{ fourth_post.title }}</a>
                     </h2>
+
+                    {% if fourth_post.categories.size > 0 %}
                     <small class="d-block text-muted">
                         In <span class="catlist">
                         {% for category in fourth_post.categories %}
@@ -132,6 +138,8 @@ description: "This is just a blog."
                         {% endfor %}
                         </span>                   
                     </small>
+                    {% endif %}
+
                     <small class="text-muted">
                         {{ fourth_post.date | date: '%b %d, %Y' }}
                     </small>

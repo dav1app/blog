@@ -18,7 +18,7 @@ plugins:
   - jekyll-seo-tag
   
 authors:
-    sal:
+    davi:
       name:           Davi Figueiredo
       site:           https://davifigueiredo.com
       avatar:         https://avatars2.githubusercontent.com/u/3607502?s=460
@@ -35,7 +35,7 @@ defaults:
       path: "_posts"
     values:
       layout: post
-      author: sal
+      author: davi
       avatar: /assets/images/avatar1.jpg
       
   # all pages
@@ -45,8 +45,10 @@ defaults:
       layout: page
       
 # Syntax
-markdown: kramdown
-highlighter: rouge
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
 
 # Paginate
 paginate: 10
