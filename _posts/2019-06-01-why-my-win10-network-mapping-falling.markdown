@@ -5,13 +5,13 @@ image: /assets/images/windows-10-logo.png
 ---
 The main cause of this event is the fact that Windows is not saving your credentials to login into the folder.
 
-Before anything else, make sure that you can map network files. There is two ways of doing so: one is though the UI (just click on `This Computer` with the right button and then `Map network drivers`. Next, you will be propted to insert your credentials and chose the drive letter. Make sure that you hit that `Save credentials` checkbox) and the second one is by running the following command on your `PowerShell` or `CMD`:
+Before anything else, make sure that you can map network files. There are two ways of doing so: one is through the UI (just click on `This Computer` with the right button and then `Map network drivers`. Next, you will be prompted to insert your credentials and chose the drive letter. Make sure that you hit that `Save credentials` checkbox) and the second one is by running the following command on your `PowerShell` or `CMD`:
 
 ```
 NET USE {driver letter}: \\{name or IP address}\{shared folders name} /user:{name or IP address}\{username} {password} /persistent:yes
 ```
 
-The command written above has the `/persistent:yes` tag. You can also try `/savcred` to check if it saves. If both answers doens't work, congratulations, you got that bug. Now follow this steps:
+The command written above has the `/persistent:yes` tag. You can also try `/savcred` to check if it saves. If it doesen't work, congratulations, you got that bug. Now follow these steps:
 
 1. Open your credential manager in Windows 10. Press `Win + R` or go to `Execute...` and type:
 
@@ -27,9 +27,9 @@ This will save another credential into your Credential Manager. Now, try to acce
 
 `NET USE {driver letter}: \\{name or IP address}\{shared folders name} /persistent:yes`
 
-We did not put the user data into it on purpose. Since you already saved the credentials, this wont be necessary. Afterwards, try logoff and logon again to check if you still can access you network folder. If it still do not work, we have one more shot.
+We did not put the user data into it on purpose. Since you already saved the credentials, this won't be necessary. Afterward, try logoff and login again to check if you still can access youe network folder. If it still does not work, we have one more shot.
 
-3. Create a `.bat` file and use the Task Schedule (`Win+R`, then `taskschd.msc`) to allow it to run on logon.
+3. Create a `.bat` file and use the Task Schedule (`Win+R`, then `taskschd.msc`) to allow it to run on login.
 
 
 
