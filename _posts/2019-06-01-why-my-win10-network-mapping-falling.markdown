@@ -15,17 +15,23 @@ The command written above has the `/persistent:yes` tag. You can also try `/savc
 
 1. Open your credential manager in Windows 10. Press `Win + R` or go to `Execute...` and type:
 
-`control /name Microsoft.CredentialManager`
+```
+control /name Microsoft.CredentialManager`
+```
 
 Check if you had any credentials saved due to previous tries. If you have any, just remove it.
 
 2. Go `PowerShell` or `CMD` and run the following command: 
 
-`CMDKEY /add:{username} /user:{name or IP address}\{username} /pass:{password}`
+```
+CMDKEY /add:{username} /user:{name or IP address}\{username} /pass:{password}
+```
 
 This will save another credential into your Credential Manager. Now, try to access your network folder using.
 
-`NET USE {driver letter}: \\{name or IP address}\{shared folders name} /persistent:yes`
+```
+NET USE {driver letter}: \\{name or IP address}\{shared folders name} /persistent:yes
+```
 
 We did not put the user data into it on purpose. Since you already saved the credentials, this won't be necessary. Afterward, try logoff and login again to check if you still can access youe network folder. If it still does not work, we have one more shot.
 
