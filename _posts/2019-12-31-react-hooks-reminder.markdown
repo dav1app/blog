@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Gracefully installing Firefox 67 on Debian."
-image: /assets/images/firefox-logo.png
+image: /assets/images/react-logo.png
 ---
 The `useEffect()` function runs every time that a component renders unless you specify the variables to watch. 
 
