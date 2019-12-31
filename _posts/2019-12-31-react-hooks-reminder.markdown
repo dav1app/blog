@@ -1,8 +1,10 @@
 ---
 layout: post
-title:  "Gracefully installing Firefox 67 on Debian."
+title:  "React Hooks equivalents on Component Lifecycle "
 image: /assets/images/react-logo.png
 ---
+In React 16.8, the Hooks were introduced to reduce the complexity of the components lifecycle. This enables us to create components without visual logic (like React Router, that forces us to render a <Router> element).
+
 The `useEffect()` function runs every time that a component renders unless you specify the variables to watch. 
 
 ## constructor(props) 
