@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "I speed-learned Flutter"
+title:  "I speed-learned Flutter."
 image: /assets/images/flutter-logo.png
 ---
 
