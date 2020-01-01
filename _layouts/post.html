@@ -129,8 +129,9 @@ layout: default
     <div class="container">
         <div class="row prevnextlinks small font-weight-bold">
           {% if page.previous.url %}
-            <div class="col-md-12 rightborder pl-0">
-                <a class="text-dark" href="{{ site.baseurl }}{{ page.previous.url }}">{% if page.previous.image %} <img height="30px" class="mr-1" src="{{site.baseurl}}{{page.previous.image}}"> {% endif %} {{page.previous.title}}</a>
+            <div class="col-md-12 rightborder pl-0 d-flex flex-row align-items-center justify-content-center">
+				<p class="mb-0 mr-4">Read more:</p>
+				<a class="text-dark" href="{{ site.baseurl }}{{ page.previous.url }}">{% if page.previous.image %} <img height="30px" class="mr-1" src="{{site.baseurl}}{{page.previous.image}}"> {% endif %} {{page.previous.title}}</a>
             </div>
           {% endif %}
         </div>
