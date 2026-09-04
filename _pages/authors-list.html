@@ -21,8 +21,10 @@ permalink: "/authors-list.html"
             <div class="icon-block mt-3 d-flex justify-content-between">  
             <div>
             {% if author[1].twitter %} <a target="_blank" href="{{ author[1].twitter }}"><i class="fab fa-twitter text-muted" aria-hidden="true"></i></a> &nbsp; {% endif %}
-            {% if author[1].mastodon %} <a target="_blank" href="{{ author[1].mastodon }}"><i class="fab fa-mastodon text-muted" aria-hidden="true"></i></a> {% endif %}
-            {% if author[1].site %}<a target="_blank" href="{{ author[1].site }}"><i class="fa fa-globe text-muted" aria-hidden="true"></i></a> &nbsp;{% endif %}
+            {% if author[1].instagram %} <a target="_blank" rel="noopener" href="{{ author[1].instagram }}" aria-label="Instagram"><i class="fab fa-instagram text-muted" aria-hidden="true"></i></a> &nbsp; {% endif %}
+            {% if author[1].threads %} <a target="_blank" rel="noopener" href="{{ author[1].threads }}" aria-label="Threads"><i class="fab fa-threads text-muted" aria-hidden="true"></i></a> &nbsp; {% endif %}
+            {% if author[1].youtube %} <a target="_blank" rel="noopener" href="{{ author[1].youtube }}" aria-label="YouTube"><i class="fab fa-youtube text-muted" aria-hidden="true"></i></a> &nbsp; {% endif %}
+            {% if author[1].site %}<a target="_blank" href="{{ author[1].site }}"><i class="fas fa-globe text-muted" aria-hidden="true"></i></a> &nbsp;{% endif %}
             </div>
             </div>
             </div>

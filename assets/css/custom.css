@@ -29,6 +29,8 @@
   --link:       #2E7D32;
   --accent:     #2E7D32;
   --shadow:     rgba(0,0,0,.075);
+  --on-accent:  #ffffff;
+  --accent-rgb: 46 125 50;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -43,6 +45,8 @@
     --link:       #66BB6A;
     --accent:     #66BB6A;
     --shadow:     rgba(0,0,0,.5);
+    --on-accent:  #14171a;
+    --accent-rgb: 102 187 106;
   }
 }
 
@@ -57,6 +61,8 @@
   --link:       #66BB6A;
   --accent:     #66BB6A;
   --shadow:     rgba(0,0,0,.5);
+  --on-accent:  #14171a;
+  --accent-rgb: 102 187 106;
 }
 
 
@@ -194,41 +200,90 @@ blockquote { border-left-color: var(--border); color: var(--text-muted); }
 .modal-content { background-color: var(--bg-surface); color: var(--text); }
 .modal-header, .modal-footer { border-color: var(--border); }
 #lunrsearchresults .lunrsearchresult a { color: var(--text-muted); }
-.btn-light, .btn-secondary {
-  background-color: var(--bg-sunken);
-  border-color: var(--border);
-  color: var(--text);
-}
-.btn-dark { background-color: var(--text); color: var(--bg); border-color: var(--text); }
 
-/* ---- accent colour ----
-   theme.css hardcodes its own green on these, so they must be re-pointed at
-   the token or the accent is inconsistent. a.text-dark:hover carries
-   !important in the theme, so this has to match it. */
+/* ---- accent colour: one colour for the whole site ----
+   Bootstrap ships six semantic colours (primary/secondary/success/info/
+   warning/danger) and theme.css hardcodes its own green on top. Every one of
+   them is aliased to --accent here, so the palette is closed: whichever
+   variant class gets used, now or later, it comes out the same green.
+   Neutral greys (surfaces, borders, muted text) are deliberately left alone --
+   they are not a competing accent. */
+
+/* links */
+a { color: var(--link); }
 a:hover, a:focus { color: var(--accent); }
+/* theme.css sets a.text-dark:hover with !important, so this must match it */
 a.text-dark:hover, a.text-dark:focus { color: var(--accent) !important; }
 .card a:hover { color: var(--accent); }
 
-.btn-success {
+/* coloured text */
+.text-primary, .text-secondary, .text-success,
+.text-info, .text-warning, .text-danger { color: var(--accent) !important; }
+
+/* solid buttons -- --on-accent flips with the theme so the label stays legible
+   on the fill (dark green + white in light mode, light green + dark in dark) */
+.btn-primary, .btn-success, .btn-info, .btn-warning, .btn-danger, .btn-dark {
   background-color: var(--accent);
   border-color: var(--accent);
-  color: #fff;
+  color: var(--on-accent);
 }
-.btn-success:hover, .btn-success:focus {
+.btn-primary:hover, .btn-success:hover, .btn-info:hover,
+.btn-warning:hover, .btn-danger:hover, .btn-dark:hover,
+.btn-primary:focus, .btn-success:focus, .btn-info:focus,
+.btn-warning:focus, .btn-danger:focus, .btn-dark:focus {
   background-color: var(--accent);
   border-color: var(--accent);
-  filter: brightness(1.1);
-  color: #fff;
+  color: var(--on-accent);
+  filter: brightness(1.12);
 }
-.btn-outline-success {
+
+/* outline buttons */
+.btn-outline-primary, .btn-outline-secondary, .btn-outline-success,
+.btn-outline-info, .btn-outline-warning, .btn-outline-danger,
+.btn-outline-dark, .btn-outline-light {
   color: var(--accent);
   border-color: var(--accent);
   background-color: transparent;
 }
-.btn-outline-success:hover, .btn-outline-success:focus {
+.btn-outline-primary:hover, .btn-outline-secondary:hover, .btn-outline-success:hover,
+.btn-outline-info:hover, .btn-outline-warning:hover, .btn-outline-danger:hover,
+.btn-outline-dark:hover, .btn-outline-light:hover,
+.btn-outline-primary:focus, .btn-outline-secondary:focus, .btn-outline-success:focus,
+.btn-outline-info:focus, .btn-outline-warning:focus, .btn-outline-danger:focus,
+.btn-outline-dark:focus, .btn-outline-light:focus {
   background-color: var(--accent);
   border-color: var(--accent);
-  color: var(--bg);
+  color: var(--on-accent);
+}
+
+/* neutral utility buttons: grey surface, accent label -- no third colour */
+.btn-light, .btn-secondary {
+  background-color: var(--bg-sunken);
+  border-color: var(--border);
+  color: var(--accent);
+}
+.btn-light:hover, .btn-secondary:hover,
+.btn-light:focus, .btn-secondary:focus {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--on-accent);
+}
+
+/* coloured fills / borders / badges */
+.bg-primary, .bg-success, .bg-info, .bg-warning, .bg-danger {
+  background-color: var(--accent) !important;
+  fill: var(--accent) !important;
+}
+.badge-primary, .badge-success, .badge-info, .badge-warning, .badge-danger {
+  background-color: var(--accent);
+  color: var(--on-accent);
+}
+.border-primary, .border-success, .border-info,
+.border-warning, .border-danger { border-color: var(--accent) !important; }
+
+/* focus rings */
+.btn:focus, .btn.focus, .form-control:focus {
+  box-shadow: 0 0 0 .2rem rgb(var(--accent-rgb) / .35);
 }
 
 /* ---- the theme toggle ---- */

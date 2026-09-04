@@ -11,7 +11,9 @@ author_key: "davi"
         <div class="row align-items-center mb-5">
             <div class="col-md-9">
                 <h2 class="font-weight-bold">{{ author.name }}
-                {% if author.mastodon %}<span class="small btn btn-outline-primary btn-sm btn-round"><a target="_blank" href="{{ author.mastodon }}">Follow</a></span>{% endif %}
+                {% if author.instagram %}<a target="_blank" rel="noopener" href="{{ author.instagram }}" class="btn btn-outline-dark btn-sm btn-round ml-1" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>{% endif %}
+                {% if author.threads %}<a target="_blank" rel="noopener" href="{{ author.threads }}" class="btn btn-outline-dark btn-sm btn-round ml-1" aria-label="Threads"><i class="fab fa-threads" aria-hidden="true"></i></a>{% endif %}
+                {% if author.youtube %}<a target="_blank" rel="noopener" href="{{ author.youtube }}" class="btn btn-outline-dark btn-sm btn-round ml-1" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>{% endif %}
                 </h2>
                 {% if author.site %}<p><a target="_blank" href="{{ author.site }}">{{ author.site }}</a></p>{% endif %}
                 <p class="excerpt">{{ author.bio }}</p>
