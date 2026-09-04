@@ -15,6 +15,10 @@ email: 'davi.mello.28@gmail.com'
 lang: pt-BR
 timezone: America/Sao_Paulo
 
+# The github-pages gem defaults to jekyll-theme-primer, which emits an unused
+# 136 KB assets/css/style.css. This site ships its own layouts and CSS.
+theme: null
+
 include: ["_pages"]
 permalink: /:title/
 

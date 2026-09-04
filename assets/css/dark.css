@@ -1,0 +1,130 @@
+/*
+ * Dark / light theming.
+ *
+ * The Mundana theme and Bootstrap 4 hardcode their colours, so there are no
+ * variables to swap. Instead this file defines a small palette as custom
+ * properties and re-points the handful of Bootstrap utilities and theme
+ * selectors that actually carry colour on this site.
+ *
+ * Three states: no data-theme = follow the OS; data-theme="light"/"dark" =
+ * explicit user choice, which must win over the OS in both directions.
+ */
+
+:root {
+  color-scheme: light;
+  --bg:         #ffffff;
+  --bg-surface: #ffffff;
+  --bg-sunken:  #f8f9fa;
+  --text:       #212529;
+  --text-muted: #6c757d;
+  --border:     #e9ecef;
+  --link:       #03a87c;
+  --accent:     #03a87c;
+  --shadow:     rgba(0,0,0,.075);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg:         #14171a;
+    --bg-surface: #1c2024;
+    --bg-sunken:  #22272c;
+    --text:       #e6e8ea;
+    --text-muted: #9aa4ad;
+    --border:     #2e353b;
+    --link:       #2fd4a7;
+    --accent:     #2fd4a7;
+    --shadow:     rgba(0,0,0,.5);
+  }
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg:         #14171a;
+  --bg-surface: #1c2024;
+  --bg-sunken:  #22272c;
+  --text:       #e6e8ea;
+  --text-muted: #9aa4ad;
+  --border:     #2e353b;
+  --link:       #2fd4a7;
+  --accent:     #2fd4a7;
+  --shadow:     rgba(0,0,0,.5);
+}
+
+/* ---- base ---- */
+body { background-color: var(--bg); color: var(--text); }
+.site-content { background-color: transparent; }
+a { color: var(--link); }
+hr { border-top-color: var(--border); }
+
+/* ---- Bootstrap utilities used in the markup ---- */
+.bg-white      { background-color: var(--bg-surface) !important; }
+.text-dark     { color: var(--text) !important; }
+.text-muted    { color: var(--text-muted) !important; }
+.border,
+.border-top    { border-color: var(--border) !important; }
+.bg-lightblue  { background-color: var(--bg-sunken) !important; }
+.box-shadow    { box-shadow: 0 .25rem .75rem var(--shadow) !important; }
+
+/* ---- navbar + footer ---- */
+.topnav.bg-white { background-color: var(--bg-surface) !important;
+                   border-bottom: 1px solid var(--border); }
+.navbar-brand, .navbar-light .navbar-nav .nav-link { color: var(--text); }
+.navbar-light .navbar-nav .nav-link:hover { color: var(--link); }
+footer.bg-white { background-color: var(--bg-surface) !important;
+                  border-top-color: var(--border) !important; }
+
+/* ---- theme components ---- */
+.spanborder span { background-color: var(--bg); }
+.spanborder      { border-bottom-color: var(--border); }
+.excerpt         { color: var(--text-muted); }
+.alertbar        { background-color: var(--bg-surface);
+                   border-top: 1px solid var(--border); }
+.card            { background-color: var(--bg-surface); }
+
+/* ---- article body + code ---- */
+.article-post, .page-content { color: var(--text); }
+.article-post pre, .page-content pre,
+.highlight, code {
+  background-color: var(--bg-sunken) !important;
+  color: var(--text);
+  border-radius: 4px;
+}
+blockquote { border-left-color: var(--border); color: var(--text-muted); }
+
+/* ---- forms + search modal ---- */
+.form-control {
+  background-color: var(--bg-sunken);
+  border-color: var(--border);
+  color: var(--text);
+}
+.form-control:focus {
+  background-color: var(--bg-sunken);
+  color: var(--text);
+  border-color: var(--accent);
+}
+.form-control::placeholder { color: var(--text-muted); }
+.modal-content { background-color: var(--bg-surface); color: var(--text); }
+.modal-header, .modal-footer { border-color: var(--border); }
+#lunrsearchresults .lunrsearchresult a { color: var(--text-muted); }
+.btn-light, .btn-secondary {
+  background-color: var(--bg-sunken);
+  border-color: var(--border);
+  color: var(--text);
+}
+.btn-dark { background-color: var(--text); color: var(--bg); border-color: var(--text); }
+
+/* ---- the toggle itself ---- */
+#theme-toggle {
+  background: none; border: 0; cursor: pointer; line-height: 1;
+  padding: .25rem .5rem; color: var(--text-muted); font-size: 1rem;
+}
+#theme-toggle:hover { color: var(--link); }
+/* Show the icon for the theme you would switch *to*. */
+#theme-toggle .icon-dark  { display: none; }
+:root[data-theme="dark"] #theme-toggle .icon-dark  { display: inline; }
+:root[data-theme="dark"] #theme-toggle .icon-light { display: none; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) #theme-toggle .icon-dark  { display: inline; }
+  :root:not([data-theme="light"]) #theme-toggle .icon-light { display: none; }
+}
