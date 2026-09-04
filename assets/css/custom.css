@@ -21,14 +21,13 @@
 :root {
   color-scheme: light;
   --bg:         #ffffff;
-  --bg-surface: #ffffff;
-  --bg-sunken:  #f8f9fa;
+  --bg-surface: #ffffff;   /* same tone: surfaces must not read as boxes */
+  --bg-sunken:  #ffffff;
   --text:       #212529;
   --text-muted: #6c757d;
   --border:     #e9ecef;
   --link:       #2E7D32;
   --accent:     #2E7D32;
-  --shadow:     rgba(0,0,0,.075);
   --on-accent:  #ffffff;
   --accent-rgb: 46 125 50;
 }
@@ -37,14 +36,13 @@
   :root:not([data-theme="light"]) {
     color-scheme: dark;
     --bg:         #14171a;
-    --bg-surface: #1c2024;
-    --bg-sunken:  #22272c;
+    --bg-surface: #14171a;   /* same tone: surfaces must not read as boxes */
+    --bg-sunken:  #14171a;
     --text:       #e6e8ea;
     --text-muted: #9aa4ad;
     --border:     #2e353b;
     --link:       #66BB6A;
     --accent:     #66BB6A;
-    --shadow:     rgba(0,0,0,.5);
     --on-accent:  #14171a;
     --accent-rgb: 102 187 106;
   }
@@ -53,14 +51,13 @@
 :root[data-theme="dark"] {
   color-scheme: dark;
   --bg:         #14171a;
-  --bg-surface: #1c2024;
-  --bg-sunken:  #22272c;
+  --bg-surface: #14171a;   /* same tone: surfaces must not read as boxes */
+  --bg-sunken:  #14171a;
   --text:       #e6e8ea;
   --text-muted: #9aa4ad;
   --border:     #2e353b;
   --link:       #66BB6A;
   --accent:     #66BB6A;
-  --shadow:     rgba(0,0,0,.5);
   --on-accent:  #14171a;
   --accent-rgb: 102 187 106;
 }
@@ -149,7 +146,6 @@ hr { border-top-color: var(--border); }
 .border,
 .border-top    { border-color: var(--border) !important; }
 .bg-lightblue  { background-color: var(--bg-sunken) !important; }
-.box-shadow    { box-shadow: 0 .25rem .75rem var(--shadow) !important; }
 
 /* ---- headings / titles ----
    The theme hardcodes these, so they stay near-black in dark mode unless they
@@ -178,7 +174,7 @@ footer.bg-white { background-color: var(--bg-surface) !important;
 /* ---- theme components ---- */
 .excerpt  { color: var(--text-muted); }
 .alertbar { background-color: var(--bg-surface); border-top: 1px solid var(--border); }
-.card     { background-color: var(--bg-surface); }
+.card     { background-color: var(--bg-surface); border: 1px solid var(--border); }
 
 /* ---- article body + code ---- */
 .article-post, .page-content { color: var(--text); }
@@ -186,8 +182,12 @@ footer.bg-white { background-color: var(--bg-surface) !important;
 .highlight, code {
   background-color: var(--bg-sunken) !important;
   color: var(--text);
+  border: 1px solid var(--border);
   border-radius: 4px;
 }
+/* inline code sits in a line of prose, so keep its box tight */
+code { padding: .1em .35em; }
+.article-post pre, .page-content pre, .highlight { padding: .75rem 1rem; }
 blockquote { border-left-color: var(--border); color: var(--text-muted); }
 
 /* ---- forms + search modal ---- */
@@ -202,7 +202,7 @@ blockquote { border-left-color: var(--border); color: var(--text-muted); }
   border-color: var(--accent);
 }
 .form-control::placeholder { color: var(--text-muted); }
-.modal-content { background-color: var(--bg-surface); color: var(--text); }
+.modal-content { background-color: var(--bg-surface); color: var(--text); border: 1px solid var(--border); }
 .modal-header, .modal-footer { border-color: var(--border); }
 #lunrsearchresults .lunrsearchresult a { color: var(--text-muted); }
 
