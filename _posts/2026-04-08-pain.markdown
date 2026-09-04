@@ -45,7 +45,7 @@ Acho que a pergunta que eu mais escuto todo mundo me fazer é "Beleza, entendi q
 
 PS: escolhi uma foto que eu lembrasse que estava sentindo dor. A dor é visível: da pra ver um dos olhos vermelhos e caído. E aos surpresos: sim, eu usava óculos - e deveria estar usando até hoje inclusive. 
 
-## O que eu tenho
+# O que eu tenho
 
 Atualmente meu diagnóstico é uma cefaléia trigeminal-autonomica. Essencialmente uma dor de cabeça diferenciada que acontece parte entre a garganta e a parte de trás da cabeça, as vezes expandindo pra baixo do pescoço (trapézio, costas) e as vezes subindo até atrás dos olhos.
 
@@ -59,12 +59,24 @@ A pior dor é quando Ela vem com a dor dos dentes - que felizmente não é sempr
 
 Minhas crises leval multiplas horas, e as vezes permanecem em um estado intermediário por dias. O record foram 3 dias, mas felizmente não foi tão dolorosa. Ela as vezes vem quando estou dormindo, o que é bem chato por mata meu dia seguinte. 
 
+Uma outra caracterrística interessante é que um lado do meu rosto as vezes fica mais baixo, e um dos olhos ficam vermelhos, somados a uma série de anomalias nos nervos do nariz (abrir e fechar em excesso, corisa). Isso é um sinal classico de Cefaléia em Salvas, mas a parte estranha é que as crises deveriam ser bem mais curtas que as minhas são. 
+
+Outra característica interessante é o chiado no ouvido. Parece o som de alguém amassando papel alumínio no pé do ouvido. O chiado é sempre do mesmo lado, apesar da dor as vezes vir do outro. Quando o chiado vem forte, a dor passa quase na hora, e volta alguns momentos depois. 
+
+Stress e ausencia de sono são os grandes desencadeadores. Quando eu fico sem dormir eu sinto dor física. Um dia é meu limite. Na ausência de dor eu sou capaz de dormir em qualquer lugar (inclusive sentado). 
+
+# Minha dança para tratar
+
 Meu método tem 5 grandes atos: 
 - Compressa no rosto: as vezes alivia a ATM da dor em si, e acaba por reduzir o stress geral. 
-- Anti-inflamatórios: diclofenaco, ibuprofeno, as vezes corticoides orais e spray. 
-- Dor: dipirona, que funciona muito bem mas para completamente de funcionar a partir de determinado ponto. Inclusive uma coisa que notei é que toda vez que ela não funciona, eu nao suo como o de costume. As vezes eu também tomo Tramadol, o que tem um efeito bizarro em mim. Outra coisa que funciona em mim é 
+- Anti-inflamatórios: diclofenaco, ibuprofeno, as vezes corticoides orais.
+- Dor: dipirona, que funciona muito bem mas para completamente de funcionar a partir de determinado ponto. Inclusive uma coisa que notei é que toda vez que ela não funciona, eu nao suo como o de costume.
+- Dor forte: Tramadol, o que tem um efeito bizarro em mim. 
+- Remédios tópicos: Corticoides nasais e rapé funcionam no alivio da dor. As vezes me seguram para eu conseguir ir ao hospital tomar isso tudo que falei na veia. 
 
-## Antes de mim
+Também tomo alguns anti-depressivos. O tratamento da dor cronica é parecido com o tratamento da depressão. Atualmente eu estou no Donaren. Quando tenho uma dificuldade muito grande pra dormir, Quetiapina e Miosan funcionam bem. 
+
+# Antes de mim
 
 Tanto minha mãe quanto a minha avó mãe da minha mãe tem um problema neurológico não identificado. Parece uma mistura de epilepsia, mas com causas diferentes. Qualquer esforço físico, mesmo que mínimo, faz minha mãe desencadear uma crise. Minha avó faleceu razoavelmente cedo, e o hospital onde ela era atendida no RJ sofreu um alagamento, o que dificultou algumas pesquisas no prontuário.
 
@@ -74,7 +86,7 @@ Hoje eu tenho 33 anos e ha alguns meses atrás meu irmão veio aqui em casa e fo
 
 Apesar de todo este contexto, não se sabe ao certo se o problema da minha mãe é relacionado ao meu ou não. Mas é importante destacar que eu e minha família estamos bem calejados ao lidar com problemas crônicos não identificados. 
 
-## Infância
+# Infância
 
 Tenho relatos da minha mãe dizendo que eu nasci chorando...e desde então não parei. Chorava ao acordar, e chorava até dormir de novo. Isso gerou um stress bem grande dentro da família, e inúmeras idas aos médicos. O problema era que os médicos eram do sistema militar de saúde. 
 
@@ -92,7 +104,7 @@ A questão é que quando a dor é crônica, o cérebro repete o processo e minha
 
 Ao momento em que perdi minha memória: dos 15 aos 17 anos mais ou menos, eu não lembro de praticamente nada. Pra ter me gravado durante esse período, tem que ter marcado emocionalmente. Alguns dos meus melhores amigos - que inclusive duram até hoje - eu não lembro como os conheci, mas sou grato de te-los conhecido. 
 
-## Minha casa 
+# Minha casa 
 
 Eu não tive o tratamento adequado enquanto morava na casa dos meus pais. Meus pais são extremamente religiosos, do tipo que em determinados momentos eu não podia conversar com alguém do sexo feminino. Eu só comecei a assistir TV aberta aos 12 anos de idade. 
 
