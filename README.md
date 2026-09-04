@@ -85,8 +85,6 @@ tags: [debian, vpn]
 
 ## Idioma
 
-O site é escrito em português (`lang: pt-BR`).
-
-As datas são renderizadas pelo include `_includes/post-date.html`, no formato
-`AAAA-MM-DD` (ex.: `2026-04-08`). Ele existe para que haja um único lugar onde
-mudar o formato das datas do site.
+O site é escrito em português (`lang: pt-BR`). As datas são renderizadas pelo
+include `_includes/data-pt.html`, porque o filtro `date` do Liquid não tem
+suporte a locale e sempre emite os meses em inglês.
