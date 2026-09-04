@@ -23,11 +23,9 @@
     <!-- Theme Stylesheet -->
     <link rel="stylesheet" href="{{ '/assets/css/theme.css' | relative_url }}">
 
-    <!-- Typography override (after theme.css to win the cascade) -->
-    <link rel="stylesheet" href="{{ '/assets/css/typography.css' | relative_url }}">
-
-    <!-- Dark / light theming (must come after theme.css to win the cascade) -->
-    <link rel="stylesheet" href="{{ '/assets/css/dark.css' | relative_url }}">
+    <!-- Site customisations: theme tokens + shared typography.
+         Must come after theme.css to win the cascade. -->
+    <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
     <!-- Applies the saved theme before first paint, so dark users never see a
          white flash. Kept inline and synchronous on purpose. -->
