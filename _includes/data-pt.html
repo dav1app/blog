@@ -1,8 +1,0 @@
-{%- comment -%}
-Liquid's `date` filter has no locale support -- `%b` always emits English month
-names. This renders a date in Portuguese instead.
-Usage: {% include data-pt.html date=post.date %}
-{%- endcomment -%}
-{%- assign _meses = "janeiro,fevereiro,março,abril,maio,junho,julho,agosto,setembro,outubro,novembro,dezembro" | split: "," -%}
-{%- assign _i = include.date | date: "%-m" | plus: 0 | minus: 1 -%}
-{{- include.date | date: "%-d" }} de {{ _meses[_i] }} de {{ include.date | date: "%Y" -}}
