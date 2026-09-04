@@ -124,11 +124,16 @@ article .h1, article .h2, article .h3, article .h4, article .h5, article .h6,
 body { font-size: 1.0625rem; line-height: 1.7; }
 .article-post, .page-content { font-size: 1.125rem; line-height: 1.75; }
 
-/* The theme floats a 5em drop cap (article:first-letter). Without clearing it,
-   a following heading wraps alongside the cap instead of starting a new block. */
-article h1, article h2, article h3, article h4, article h5, article h6,
-article .h1, article .h2, article .h3, article .h4, article .h5, article .h6 {
-  clear: left;
+/* theme.css renders the article's first letter as a floated 5em drop cap.
+   Disabled here: it fought with headings and images, and reset the properties
+   rather than editing theme.css so the vendor file stays untouched. */
+article:first-letter,
+article::first-letter {
+  float: none;
+  font-size: inherit;
+  line-height: inherit;
+  margin: 0;
+  vertical-align: baseline;
 }
 
 /* ---- base colours ---- */
