@@ -53,7 +53,17 @@ blog do ar — foi exatamente o que aconteceu aqui.
 
 ## Escrevendo um post
 
-Crie um arquivo em `_posts/` com o nome `AAAA-MM-DD-um-slug.markdown`:
+Há um modelo pronto em [`_templates/post.markdown`](_templates/post.markdown)
+com todo o front matter comentado. Copie e renomeie:
+
+```sh
+cp _templates/post.markdown _posts/$(date +%F)-meu-slug.markdown
+```
+
+`_templates/` começa com `_` e não é uma pasta conhecida do Jekyll, então é
+ignorada na build — o modelo nunca vai para o ar.
+
+O front matter mínimo é:
 
 ```yaml
 ---
