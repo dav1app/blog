@@ -44,7 +44,7 @@ layout: default
 				</div>
                 {% if page.image %}
 				<div class="col-md-6 pr-0 align-self-center">
-					<img class="rounded" src="{{ site.baseurl }}{{ page.image }}" alt="{{ page.title }}">
+					<img class="rounded" src="{{ page.image | relative_url }}" alt="{{ page.title }}">
 				</div>
                 {% endif %}
 			</div>
@@ -131,7 +131,7 @@ layout: default
           {% if page.previous.url %}
             <div class="col-md-12 rightborder pl-0 d-flex flex-row align-items-center justify-content-center">
 				<p class="mb-0 mr-4">Read more:</p>
-				<a class="text-dark" href="{{ site.baseurl }}{{ page.previous.url }}">{% if page.previous.image %} <img height="30px" class="mr-1" src="{{site.baseurl}}{{page.previous.image}}"> {% endif %} {{page.previous.title}}</a>
+				<a class="text-dark" href="{{ site.baseurl }}{{ page.previous.url }}">{% if page.previous.image %} <img height="30px" class="mr-1" src="{{ page.previous.image | relative_url }}"> {% endif %} {{page.previous.title}}</a>
             </div>
           {% endif %}
         </div>

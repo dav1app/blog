@@ -26,19 +26,30 @@ whole dependency set to whatever GitHub Pages is currently running, so a fresh
 ## Publishing
 
 GitHub Pages builds the `master` branch automatically on push; there is no
-Actions workflow to maintain. The live URL is set in two places that must agree:
+Actions workflow to maintain. The site is served at:
 
-| File          | Setting                                        |
-| ------------- | ---------------------------------------------- |
-| `CNAME`       | the custom domain, e.g. `example.com`           |
-| `_config.yml` | `url:` (scheme + host) and `baseurl:` (subpath) |
+    https://dav1app.github.io/blog/
 
-`baseurl` is a **path**, not a URL — it is `''` when the site is served from the
-root of a domain, and `/blog` when served from `https://<user>.github.io/blog/`.
-Putting a full URL in `baseurl` breaks every internal link.
+`_config.yml` must match wherever the site is served from:
 
-The domain in `CNAME` must also have a DNS record pointing at GitHub Pages, or
-Pages will redirect the site to an address that does not resolve.
+```yaml
+url: 'https://dav1app.github.io'   # scheme + host
+baseurl: '/blog'                   # subpath, '' at a domain root
+```
+
+`baseurl` is a **path**, not a URL. Putting a full URL in it breaks every
+internal link — that was the original bug here.
+
+### Moving to a custom domain later
+
+1. Register the domain and point DNS at GitHub Pages (`A` records to GitHub's
+   four Pages IPs, or a `CNAME` record to `dav1app.github.io`).
+2. Add a `CNAME` file at the repo root containing just the domain.
+3. Set `url:` to `https://that-domain` and `baseurl:` to `''`.
+
+Do step 1 first. A `CNAME` naming a domain that has no DNS records makes Pages
+redirect the site to an address that does not resolve, which takes the blog
+offline — that is exactly what had happened here.
 
 ## Writing a post
 

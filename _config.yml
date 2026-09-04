@@ -5,10 +5,11 @@ description: 'I built a blog so I can tell my story and help others.'
 favicon: 'assets/images/favicon.png'
 
 # `url` is the origin (scheme + host); `baseurl` is the subpath the site is
-# served from ('' when served at the root of a domain). These are set from the
-# Pages custom domain in CNAME -- see README.md.
-url: 'https://REPLACE-ME.example'
-baseurl: ''
+# served from. This site is served from the project-pages path, so baseurl is
+# '/blog'. If a custom domain is added later, add a CNAME file and change these
+# to that domain with baseurl: '' -- see README.md.
+url: 'https://dav1app.github.io'
+baseurl: '/blog'
 
 email: 'davi.mello.28@gmail.com'
 lang: en
