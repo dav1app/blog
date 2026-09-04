@@ -26,8 +26,8 @@
   --text:       #212529;
   --text-muted: #6c757d;
   --border:     #e9ecef;
-  --link:       #03a87c;
-  --accent:     #03a87c;
+  --link:       #2E7D32;
+  --accent:     #2E7D32;
   --shadow:     rgba(0,0,0,.075);
 }
 
@@ -40,8 +40,8 @@
     --text:       #e6e8ea;
     --text-muted: #9aa4ad;
     --border:     #2e353b;
-    --link:       #2fd4a7;
-    --accent:     #2fd4a7;
+    --link:       #66BB6A;
+    --accent:     #66BB6A;
     --shadow:     rgba(0,0,0,.5);
   }
 }
@@ -54,8 +54,8 @@
   --text:       #e6e8ea;
   --text-muted: #9aa4ad;
   --border:     #2e353b;
-  --link:       #2fd4a7;
-  --accent:     #2fd4a7;
+  --link:       #66BB6A;
+  --accent:     #66BB6A;
   --shadow:     rgba(0,0,0,.5);
 }
 
@@ -200,6 +200,36 @@ blockquote { border-left-color: var(--border); color: var(--text-muted); }
   color: var(--text);
 }
 .btn-dark { background-color: var(--text); color: var(--bg); border-color: var(--text); }
+
+/* ---- accent colour ----
+   theme.css hardcodes its own green on these, so they must be re-pointed at
+   the token or the accent is inconsistent. a.text-dark:hover carries
+   !important in the theme, so this has to match it. */
+a:hover, a:focus { color: var(--accent); }
+a.text-dark:hover, a.text-dark:focus { color: var(--accent) !important; }
+.card a:hover { color: var(--accent); }
+
+.btn-success {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn-success:hover, .btn-success:focus {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  filter: brightness(1.1);
+  color: #fff;
+}
+.btn-outline-success {
+  color: var(--accent);
+  border-color: var(--accent);
+  background-color: transparent;
+}
+.btn-outline-success:hover, .btn-outline-success:focus {
+  background-color: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
 
 /* ---- the theme toggle ---- */
 #theme-toggle {
