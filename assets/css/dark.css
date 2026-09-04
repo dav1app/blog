@@ -66,17 +66,28 @@ hr { border-top-color: var(--border); }
 .bg-lightblue  { background-color: var(--bg-sunken) !important; }
 .box-shadow    { box-shadow: 0 .25rem .75rem var(--shadow) !important; }
 
+/* ---- headings / titles ----
+   The theme hardcodes these, so they stay near-black in dark mode unless they
+   are re-pointed. Selector specificity is matched to the theme's own rules
+   (e.g. .navbar-light .navbar-brand is 0,2,0) -- a bare .navbar-brand loses. */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 { color: var(--text); }
+.article-headline            { color: var(--text); }
+.spanborder span             { border-bottom-color: var(--border); }
+
 /* ---- navbar + footer ---- */
 .topnav.bg-white { background-color: var(--bg-surface) !important;
                    border-bottom: 1px solid var(--border); }
-.navbar-brand, .navbar-light .navbar-nav .nav-link { color: var(--text); }
+.navbar-light .navbar-brand,
+.navbar-light .navbar-brand:hover,
+.navbar-light .navbar-brand:focus { color: var(--text); }
+.navbar-light .navbar-nav .nav-link { color: var(--text-muted); }
 .navbar-light .navbar-nav .nav-link:hover { color: var(--link); }
 footer.bg-white { background-color: var(--bg-surface) !important;
                   border-top-color: var(--border) !important; }
 
 /* ---- theme components ---- */
 .spanborder span { background-color: var(--bg); }
-.spanborder      { border-bottom-color: var(--border); }
 .excerpt         { color: var(--text-muted); }
 .alertbar        { background-color: var(--bg-surface);
                    border-top: 1px solid var(--border); }

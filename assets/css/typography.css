@@ -1,0 +1,70 @@
+/*
+ * Typography: STIX Two Text.
+ *
+ * The base theme mixes Lora, Georgia and Arial across a handful of selectors
+ * (article, .navbar-brand, .article-headline, .jumbotron-home h1, blockquote).
+ * This file re-points all of them at one family. Loaded after theme.css so it
+ * wins the cascade.
+ *
+ * Titles use their own token, --font-title, which changes with the theme, so
+ * the navbar toggle swaps headings from serif to sans as well as swapping
+ * colours. Body copy stays STIX in both themes.
+ *
+ * Code stays monospace on purpose -- a serif face makes code hard to scan.
+ */
+
+:root {
+  --font-serif: "STIX Two Text", "STIX Two Math", "Times New Roman", Times, Georgia, serif;
+  --font-sans: "Segoe UI", "Helvetica Neue", Helvetica, Arial, system-ui, sans-serif;
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+  /* Light theme: serif titles. */
+  --font-title: var(--font-serif);
+}
+
+/* Dark theme: sans titles. Same three states as dark.css -- bare :root follows
+   the OS, and an explicit data-theme choice must win in both directions. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --font-title: var(--font-sans); }
+}
+:root[data-theme="dark"]  { --font-title: var(--font-sans); }
+:root[data-theme="light"] { --font-title: var(--font-serif); }
+
+/* ---- body copy: STIX in both themes ---- */
+body,
+article,
+.article-post,
+.page-content,
+.excerpt,
+.btn,
+.form-control,
+ol.list-featured li:before,
+article blockquote:before {
+  font-family: var(--font-serif);
+}
+
+/* ---- titles: follow the theme ---- */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6,
+.navbar-brand,
+.article-headline,
+.jumbotron-home h1,
+.spanborder span {
+  font-family: var(--font-title);
+}
+
+/* Sans titles sit visually heavier; ease the tracking a little so the two
+   theme states have comparable weight on the page. */
+:root[data-theme="dark"] h1,
+:root[data-theme="dark"] .article-headline,
+:root[data-theme="dark"] .navbar-brand { letter-spacing: -0.01em; }
+
+/* STIX has a modest x-height, so the theme's default body size reads small.
+   A small bump keeps line length and rhythm comfortable. */
+body { font-size: 1.0625rem; line-height: 1.7; }
+.article-post, .page-content { font-size: 1.125rem; line-height: 1.75; }
+
+/* Keep code monospace regardless of the rules above. */
+code, pre, kbd, samp, .highlight, .highlight * {
+  font-family: var(--font-mono) !important;
+}
