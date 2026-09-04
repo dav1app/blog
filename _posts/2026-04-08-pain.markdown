@@ -1,0 +1,101 @@
+---
+# ---------------------------------------------------------------------------
+# MODELO DE POST
+#
+# Como usar:
+#   1. Copie este arquivo para _posts/
+#   2. Renomeie para AAAA-MM-DD-um-slug-curto.markdown
+#      (a data e o slug vêm do nome do arquivo; a URL final será /um-slug-curto/)
+#   3. Preencha o front matter abaixo e escreva o texto
+#
+# Pastas iniciadas por "_" que o Jekyll não conhece são ignoradas na build,
+# então este arquivo nunca é publicado.
+# ---------------------------------------------------------------------------
+
+# OBRIGATÓRIO -------------------------------------------------------------
+title: "A dor que eu sinto"
+
+# OPCIONAIS ---------------------------------------------------------------
+
+# Imagem de capa. Aparece no card da home e no cabeçalho do post.
+# Coloque o arquivo em assets/images/ e use o caminho a partir da raiz.
+image: /assets/images/posts/image-1.jpg
+
+# Categorias: alimentam /categories.html. Use poucas e reaproveite as
+# existentes (ex.: linux, redes, windows, desenvolvimento, carreira).
+categories: [dor]
+
+# Tags: alimentam /tags.html. Duas têm efeito especial no tema:
+#   featured -> destaca o post na barra lateral da home
+#   sticky   -> fixa o post em um banner no topo da home
+tags: [dor]
+
+# Resumo usado nos cards e nas meta tags. Se omitido, o Jekyll usa o
+# primeiro parágrafo do texto.
+description: "A pergunta que eu mais escuto é 'O que você tem?' e até hoje eu não sei responder exatamente."
+
+# Data/hora explícita. Só é necessária para ordenar dois posts do mesmo dia.
+# date: 2026-09-04 10:00:00 -0300
+
+# layout: post e author: davi são aplicados automaticamente pelo bloco
+# defaults: do _config.yml — não precisa repetir aqui.
+---
+
+Acho que a pergunta que eu mais escuto todo mundo me fazer é "Beleza, entendi que você sente dor, mas qual é exatamente a dor?". Até então, eu não tenho uma resposta clara para dar, mas vou tentar começar esse blog explicando exatamente como eu sinto Ela - e sim, eu vou me me referir a Ela aqui. Vou explicar mais pra frente. 
+
+PS: escolhi uma foto que eu lembrasse que estava sentindo dor. A dor é visível: da pra ver um dos olhos vermelhos e caído. E aos surpresos: sim, eu usava óculos - e deveria estar usando até hoje inclusive. 
+
+## O que eu tenho
+
+Atualmente meu diagnóstico é uma cefaléia trigeminal-autonomica. Essencialmente uma dor de cabeça diferenciada que acontece parte entre a garganta e a parte de trás da cabeça, as vezes expandindo pra baixo do pescoço (trapézio, costas) e as vezes subindo até atrás dos olhos.
+
+Pense numa sinusite + enxaqueca + torcicolo + dor de dente + ATM.
+
+A ATM eu acredito que parcialmente seja justificada pela dor em si. Eu sinto que forço minha boca sempre que estou com dor. 
+
+A enxaqueca é a que mais se aproxima. Algumas vezes eu tenho a enxaqueca clara: aura, vomitar de dor (e quando eu vomito alivia), sensibilidade a silêncio. Mas a dor é fundamentalmente diferente em alguns outros aspectos: os choques nos dentes não são tão característicos, e a medicação tradicional para enxaqueca (sulmax) não surte nenhum efeito. 
+
+A pior dor é quando Ela vem com a dor dos dentes - que felizmente não é sempre que vem. Essa dor é bem forte, incapacitante. É como se de tempos em tempos eu recebesse um corte dentro da boca, que vai e vem junto com a batida do coração. Eu sinto que é um nervo inflamado. Dói a ponto de eu não conseguir dirigir, e algumas vezes nem digitar.
+
+Minhas crises leval multiplas horas, e as vezes permanecem em um estado intermediário por dias. O record foram 3 dias, mas felizmente não foi tão dolorosa. Ela as vezes vem quando estou dormindo, o que é bem chato por mata meu dia seguinte. 
+
+Meu método tem 5 grandes atos: 
+- Compressa no rosto: as vezes alivia a ATM da dor em si, e acaba por reduzir o stress geral. 
+- Anti-inflamatórios: diclofenaco, ibuprofeno, as vezes corticoides orais e spray. 
+- Dor: dipirona, que funciona muito bem mas para completamente de funcionar a partir de determinado ponto. Inclusive uma coisa que notei é que toda vez que ela não funciona, eu nao suo como o de costume. As vezes eu também tomo Tramadol, o que tem um efeito bizarro em mim. Outra coisa que funciona em mim é 
+
+## Antes de mim
+
+Tanto minha mãe quanto a minha avó mãe da minha mãe tem um problema neurológico não identificado. Parece uma mistura de epilepsia, mas com causas diferentes. Qualquer esforço físico, mesmo que mínimo, faz minha mãe desencadear uma crise. Minha avó faleceu razoavelmente cedo, e o hospital onde ela era atendida no RJ sofreu um alagamento, o que dificultou algumas pesquisas no prontuário.
+
+Existem duas fases da crise dela: uma que ela consegue passar dormindo, e outra que é necessário levá-se ao hospital de imediato. Minha casa tinha um protocolo para lidar com isso: meu pai alerta eu ou meu irmão, e quem estiver disponível assume a bronca porque duas pessoas são necessárias em todo o processo. 
+
+Hoje eu tenho 33 anos e ha alguns meses atrás meu irmão veio aqui em casa e foi 'acionado'. Eu saí do protocolo depois que me casei, uma vez que meus pais moram do outro lado da cidade (40km de distância). Meu irmão saiu imediatamente daqui de casa para encontrar ambos já no hospital. Existe todo um processo logístico de cadeira de rodas, estacionamento do carro, acompanhamento, informativo para os médicos.  
+
+Apesar de todo este contexto, não se sabe ao certo se o problema da minha mãe é relacionado ao meu ou não. Mas é importante destacar que eu e minha família estamos bem calejados ao lidar com problemas crônicos não identificados. 
+
+## Infância
+
+Tenho relatos da minha mãe dizendo que eu nasci chorando...e desde então não parei. Chorava ao acordar, e chorava até dormir de novo. Isso gerou um stress bem grande dentro da família, e inúmeras idas aos médicos. O problema era que os médicos eram do sistema militar de saúde. 
+
+Como de costume no meio militar, ninguém sabia de nada. Rodei todo tipo de médico, e na adolescencia cai em um alergista/homeopata que prendeu a atenção da minha mãe de maneira suficiente para ela entrar na onda. Tomei aquelas bonilhas de açucar de maneira completamente desregrada porque o gosto era bom. 
+
+Um outro medicamento que tomei em excesso sem saber foram os corticosteróides: anti-inflamatórios esteroidais - o que significa "se você tomar demais dele, seu corpo para de produzir". Eu queria ter entendido isso na minha infância, porque a quantidade de corticoides que eu tomei foi surreal. Aparentemente era uma das únicas coisas que me acalmavam. 
+
+# O cérebro se adapta
+
+Todas as vezes que eu vejo minhas fotos pequeno, eu vejo duas pessoas diferentes: um Davi sorridente, e um Davi que parece que morreu ali mesmo. Olheiras profundas, mandibula fixada. Era dor, e eu não sabia que era dor. As fotos sorridentes provavelmente eu estava sob o efeito de alguma medicação para dor - provavelmente corticoides. 
+
+Um efeito colateral da dor crônica é a perda de memória. Quando as mulheres passam pelo processo de parto acontece um processo semelhante: como a dor é grande, o cérebro desliga a parte que armazena as lembranças da dor, afim de evitar um trauma. Isso faz com que a memória mude, e você não fica desincentivada a ter outro filho depois. Evolução biológica - até porque não acho que o homem das cavernas tinha uma vida fácil. 
+
+A questão é que quando a dor é crônica, o cérebro repete o processo e minha memória foi pra vala. Quando tinha perto de 15 anos, eu entrei em uma depressão braba por questões adolecenticas, só que como eu já tinha a dor, minha memória se apagou por completo. Acho que depois posso fazer um post exclusivamente sobre este assunto, porque tem muita coisa bizarra que rola com quem essa perda de memória. Durante uma década eu me perguntava porque eu não conseguia guardar as pessoas na minha memória. Eu perdia nomes, perdia rostos, esquecia as roupas que tinha. Era um caos. Só depois que eu comecei a fazer o tratamento pra dor crônica (com 24 anos) que tudo começou a fazer sentido de verdade. 
+
+Ao momento em que perdi minha memória: dos 15 aos 17 anos mais ou menos, eu não lembro de praticamente nada. Pra ter me gravado durante esse período, tem que ter marcado emocionalmente. Alguns dos meus melhores amigos - que inclusive duram até hoje - eu não lembro como os conheci, mas sou grato de te-los conhecido. 
+
+## Minha casa 
+
+Eu não tive o tratamento adequado enquanto morava na casa dos meus pais. Meus pais são extremamente religiosos, do tipo que em determinados momentos eu não podia conversar com alguém do sexo feminino. Eu só comecei a assistir TV aberta aos 12 anos de idade. 
+
+Por anos a justificativa pra tudo o que havia de ruim era falta de "ler a biblia". Minha mãe colocou fogo em vários objetos meus, a ponto de existir um vaso de barro usado como uma espécie de caldeirão. Lembro que ali se foi meu deck de Magic. 
+
+Enfim, eu não os culpo por isso. Meu pai tem seus traumas, e eu fui somente o reflexo deles. Ele fez o melhor que pudia - e ainda acho que em muitos pontos ele acertou muito mais do que os pais de amigos meus da época. Se por um lado esse tipo de abuso na infância é ruim, por outro eu podia estar com o cérebro derretido por ter assistido banheira do Gugu cedo demais. Na vida real, até mesmo o sofrimento mais profundo. 
