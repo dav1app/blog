@@ -298,6 +298,26 @@ a.text-dark:hover, a.text-dark:focus { color: var(--accent) !important; }
   line-height: 1.6;
 }
 
+/* Mobile hamburger.
+   Bootstrap bakes stroke='rgba(0,0,0,0.5)' into a data-URI background-image,
+   and a CSS variable cannot be interpolated into url() -- so the icon stayed
+   black in dark mode. Using the SVG as a mask instead means the shape comes
+   from the data URI and the colour from background-color, which follows the
+   theme. (Alpha is what a mask reads, so the stroke colour below is irrelevant
+   as long as it is opaque.) */
+.navbar-light .navbar-toggler-icon {
+  background-image: none;
+  background-color: var(--text);
+  -webkit-mask: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") no-repeat center;
+          mask: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") no-repeat center;
+  -webkit-mask-size: 100% 100%;
+          mask-size: 100% 100%;
+}
+.navbar-light .navbar-toggler {
+  color: var(--text);
+  border-color: var(--border);
+}
+
 /* ---- the theme toggle ---- */
 #theme-toggle {
   background: none; border: 0; cursor: pointer; line-height: 1;
