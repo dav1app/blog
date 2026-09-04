@@ -40,4 +40,4 @@ Reservamo-nos o direito de atualizar ou alterar esta Política de Privacidade a 
 
 #### Informações de contato
 
-Em caso de dúvidas ou preocupações sobre esta política de privacidade, [entre em contato aqui]({{site.baseurl}}/contact.html).
+Em caso de dúvidas ou preocupações sobre esta política de privacidade, escreva para [{{ site.email }}](mailto:{{ site.email }}).

@@ -12,5 +12,4 @@ parte do que você encontra aqui são anotações sobre problemas que enfrentei 
 verdade no trabalho — administração de redes e Windows, VPNs, Linux e o que
 quer que eu esteja aprendendo a construir no momento.
 
-Você pode falar comigo em [{{ site.email }}](mailto:{{ site.email }}) ou me
-encontrar no [GitHub](https://github.com/dav1app).
+Você me encontra no [GitHub](https://github.com/dav1app).
