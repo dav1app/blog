@@ -14,16 +14,8 @@ description: "This is just a blog."
     
     
 <!-- Begin post excerpts, let's highlight the first 4 posts on top -->
-<div class="row remove-site-content-margin">
-    <div class="col-md-12">
-        <div class="alert alert-danger" role="alert">
-            <p class="mb-0 align-items-center">
-               <i class="fas fa-hammer mr-2"></i> This blog is under construction, so please be patient. Thank you!
-            </p>
-        </div>
-    </div>
-</div>
 
+{% if site.posts.size > 0 %}
 <div class="row ">
     
     <!-- latest post -->
@@ -161,6 +153,8 @@ description: "This is just a blog."
     
 </div>
     
+{% endif %}
+
 <!-- Sticky - add sticky tag to the post you want to highlight here - tags: [sticky] -->
 {% for post in site.posts %} 
 {% if post.tags contains "sticky" %}
@@ -202,6 +196,10 @@ description: "This is just a blog."
         {% for post in paginator.posts %}
         
             {% include main-loop-card.html %}
+        
+        {% else %}
+        
+            <p class="text-muted">No posts yet. Add a Markdown file to <code>_posts/</code> to publish the first one &mdash; see the README.</p>
         
         {% endfor %}
         

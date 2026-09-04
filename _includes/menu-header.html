@@ -1,14 +1,17 @@
 <!--  Replace menu links here -->
 
 <li class="nav-item">
-<a class="nav-link" href="{{site.baseurl}}/index.html">Home</a>
+<a class="nav-link" href="{{ '/' | relative_url }}">Home</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="{{site.baseurl}}/authors-list.html">Authors</a>
+<a class="nav-link" href="{{ '/about.html' | relative_url }}">About</a>
 </li>
 <li class="nav-item">
-<a class="nav-link" href="{{site.baseurl}}/contact.html">Contact</a>
+<a class="nav-link" href="{{ '/categories.html' | relative_url }}">Categories</a>
 </li>
 <li class="nav-item">
-<a target="_blank" class="nav-link btn btn-outline-primary text-primary ml-3" href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=DQVLTRFEB58VJ&source=url"><i class="fab fa-paypal text-primary"></i> Donate </a>
+<a class="nav-link" href="{{ '/tags.html' | relative_url }}">Tags</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="{{ '/contact.html' | relative_url }}">Contact</a>
 </li>

@@ -1,7 +1,17 @@
-jekyll:
-    image: jekyll/jekyll:latest
-    command: jekyll serve --force_polling
+# Local preview without installing Ruby on the host:
+#   docker compose up   ->   http://localhost:4000
+services:
+  jekyll:
+    image: ruby:3.3-slim
+    working_dir: /srv
     ports:
-        - 4000:4000
+      - "4000:4000"
     volumes:
-        - .:/srv/jekyll
+      - .:/srv
+      - bundle:/usr/local/bundle
+    command: >
+      bash -lc "apt-get update -qq && apt-get install -y -qq build-essential git &&
+                bundle install &&
+                bundle exec jekyll serve --host 0.0.0.0 --force_polling --livereload"
+volumes:
+  bundle:

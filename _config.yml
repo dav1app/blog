@@ -1,32 +1,41 @@
 # Site
+title: 'Davi Figueiredo'
 name: 'Davi Figueiredo'
 description: 'I built a blog so I can tell my story and help others.'
-logo: 'assets/images/logo.png'
 favicon: 'assets/images/favicon.png'
 
-baseurl: 'https://davifigueiredo.com.br'
+# `url` is the origin (scheme + host); `baseurl` is the subpath the site is
+# served from ('' when served at the root of a domain). These are set from the
+# Pages custom domain in CNAME -- see README.md.
+url: 'https://REPLACE-ME.example'
+baseurl: ''
+
 email: 'davi.mello.28@gmail.com'
+lang: en
+timezone: America/Sao_Paulo
 
 include: ["_pages"]
 permalink: /:title/
 
 # Plugins
-plugins: 
+plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-seo-tag
-  
+
 authors:
     davi:
       name:           Davi Figueiredo
-      site:           https://davifigueiredo.com
+      site:           https://github.com/dav1app
       avatar:         https://avatars2.githubusercontent.com/u/3607502?s=460
       bio:            "IT Manager and Full-Stack Developer, enthusiast of decentralization. Designer, musician, and bodybuilder in free time."
       email:          davi.mello.28@gmail.com
       mastodon:       https://mastodon.social/@davifigueiredo
 
- 
+# jekyll-seo-tag author/social metadata
+author: Davi Figueiredo
+
 # Defaults
 defaults:
 
@@ -36,14 +45,13 @@ defaults:
     values:
       layout: post
       author: davi
-      avatar: /assets/images/avatar1.jpg
-      
+
   # all pages
   - scope:
       path: "_pages"
     values:
       layout: page
-      
+
 # Syntax
 kramdown:
   input: GFM
@@ -52,8 +60,13 @@ kramdown:
 
 # Paginate
 paginate: 10
+paginate_path: "/page:num/"
 
-
-
-# Exclude metadata and development time dependencies (like Grunt plugins)
-exclude: [README.markdown, package.json, grunt.js, Gruntfile.js, Gruntfile.coffee, node_modules]
+# Exclude development files from the built site
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - docker-compose.yml
+  - vendor
+  - node_modules

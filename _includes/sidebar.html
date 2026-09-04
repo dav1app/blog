@@ -1,7 +1,9 @@
-<h5 class="mb-3">Mundana Jekyll Theme</h5>
+{% assign author = site.authors.davi %}
+<h5 class="mb-3">About</h5>
 
-<p>Hi! The website you are previewing is a demonstration for Mundana Jekyll theme, hosted on Github, made by <a href="https://www.wowthemes.net/donate/">Sal</a>.</p>
+<img alt="{{ author.name }}" src="{{ author.avatar }}" class="rounded-circle mb-3" height="80" width="80">
 
-<a target="_blank" href="https://www.wowthemes.net/mundana-jekyll-theme/" class="btn btn-warning d-block mb-2"><i class="fa fa-file"></i> Documentation</a>
+<p>{{ author.bio }}</p>
 
-<a target="_blank" class="btn btn-danger d-block" href="https://www.wowthemes.net/donate/"><i class="fa fa-coffee"></i> Buy me a coffee</a> 
+{% if author.mastodon %}<a target="_blank" rel="me" href="{{ author.mastodon }}" class="btn btn-outline-primary d-block mb-2"><i class="fab fa-mastodon"></i> Mastodon</a>{% endif %}
+{% if author.site %}<a target="_blank" href="{{ author.site }}" class="btn btn-outline-dark d-block"><i class="fab fa-github"></i> GitHub</a>{% endif %}
