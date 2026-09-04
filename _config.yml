@@ -1,7 +1,7 @@
 # Site
 title: 'Davi Figueiredo'
 name: 'Davi Figueiredo'
-description: 'I built a blog so I can tell my story and help others.'
+description: 'Criei este blog para contar a minha história e ajudar outras pessoas.'
 favicon: 'assets/images/favicon.png'
 
 # `url` is the origin (scheme + host); `baseurl` is the subpath the site is
@@ -12,7 +12,7 @@ url: 'https://dav1app.github.io'
 baseurl: '/blog'
 
 email: 'davi.mello.28@gmail.com'
-lang: en
+lang: pt-BR
 timezone: America/Sao_Paulo
 
 include: ["_pages"]
@@ -30,7 +30,7 @@ authors:
       name:           Davi Figueiredo
       site:           https://github.com/dav1app
       avatar:         https://avatars2.githubusercontent.com/u/3607502?s=460
-      bio:            "IT Manager and Full-Stack Developer, enthusiast of decentralization. Designer, musician, and bodybuilder in free time."
+      bio:            "Gerente de TI e desenvolvedor full-stack, entusiasta da descentralização. Designer, músico e fisiculturista nas horas vagas."
       email:          davi.mello.28@gmail.com
       mastodon:       https://mastodon.social/@davifigueiredo
 

@@ -1,15 +1,16 @@
 ---
-title: "About"
+title: "Sobre"
 layout: page-sidebar
 permalink: "/about.html"
 ---
-Hi, I'm **Davi Figueiredo** — IT Manager and Full-Stack Developer, enthusiast of
-decentralization. Designer, musician, and bodybuilder in my free time.
+Olá, eu sou o **Davi Figueiredo** — gerente de TI e desenvolvedor full-stack,
+entusiasta da descentralização. Designer, músico e fisiculturista nas horas
+vagas.
 
-I built this blog so I can tell my story and help others. Most of what you'll
-find here are write-ups of problems I actually hit at work — Windows and network
-administration, VPNs, Linux, and whatever I'm currently learning to build with.
+Criei este blog para contar a minha história e ajudar outras pessoas. A maior
+parte do que você encontra aqui são anotações sobre problemas que enfrentei de
+verdade no trabalho — administração de redes e Windows, VPNs, Linux e o que
+quer que eu esteja aprendendo a construir no momento.
 
-You can reach me at [{{ site.email }}](mailto:{{ site.email }}), or find me on
-[GitHub](https://github.com/dav1app) and
-[Mastodon]({{ site.authors.davi.mastodon }}).
+Você pode falar comigo em [{{ site.email }}](mailto:{{ site.email }}) ou me
+encontrar no [GitHub](https://github.com/dav1app).

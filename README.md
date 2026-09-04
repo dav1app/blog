@@ -1,74 +1,80 @@
 # davifigueiredo — blog
 
-A personal blog built with [Jekyll](https://jekyllrb.com/) and hosted on GitHub
-Pages, using the [Mundana](https://www.wowthemes.net/mundana-jekyll-theme/)
-theme by WowThemes.
+Blog pessoal feito com [Jekyll](https://jekyllrb.com/) e hospedado no GitHub
+Pages, usando o tema [Mundana](https://www.wowthemes.net/mundana-jekyll-theme/),
+da WowThemes.
 
-## Running it locally
+## Rodando localmente
 
-With Docker (nothing to install on the host):
+Com Docker (sem instalar nada na máquina):
 
 ```sh
 docker compose up          # -> http://localhost:4000
 ```
 
-With a local Ruby (3.0+):
+Com Ruby instalado (3.0+):
 
 ```sh
 bundle install
 bundle exec jekyll serve    # -> http://localhost:4000
 ```
 
-`Gemfile.lock` is intentionally not committed — the `github-pages` gem pins the
-whole dependency set to whatever GitHub Pages is currently running, so a fresh
-`bundle install` matches production.
+O `Gemfile.lock` não é versionado de propósito: a gem `github-pages` fixa todas
+as dependências na mesma versão que o GitHub Pages usa, então um `bundle install`
+limpo reproduz o ambiente de produção.
 
-## Publishing
+## Publicando
 
-GitHub Pages builds the `master` branch automatically on push; there is no
-Actions workflow to maintain. The site is served at:
+O GitHub Pages compila a branch `master` automaticamente a cada push; não há
+workflow do Actions para manter. O site é servido em:
 
     https://dav1app.github.io/blog/
 
-`_config.yml` must match wherever the site is served from:
+O `_config.yml` precisa corresponder ao endereço onde o site é servido:
 
 ```yaml
-url: 'https://dav1app.github.io'   # scheme + host
-baseurl: '/blog'                   # subpath, '' at a domain root
+url: 'https://dav1app.github.io'   # esquema + domínio
+baseurl: '/blog'                   # subcaminho, '' na raiz de um domínio
 ```
 
-`baseurl` is a **path**, not a URL. Putting a full URL in it breaks every
-internal link — that was the original bug here.
+`baseurl` é um **caminho**, não uma URL. Colocar uma URL completa nele quebra
+todos os links internos — esse era o bug original aqui.
 
-### Moving to a custom domain later
+### Migrando para um domínio próprio
 
-1. Register the domain and point DNS at GitHub Pages (`A` records to GitHub's
-   four Pages IPs, or a `CNAME` record to `dav1app.github.io`).
-2. Add a `CNAME` file at the repo root containing just the domain.
-3. Set `url:` to `https://that-domain` and `baseurl:` to `''`.
+1. Registre o domínio e aponte o DNS para o GitHub Pages (registros `A` para os
+   quatro IPs do Pages, ou um registro `CNAME` para `dav1app.github.io`).
+2. Crie um arquivo `CNAME` na raiz do repositório contendo apenas o domínio.
+3. Ajuste `url:` para `https://o-dominio` e `baseurl:` para `''`.
 
-Do step 1 first. A `CNAME` naming a domain that has no DNS records makes Pages
-redirect the site to an address that does not resolve, which takes the blog
-offline — that is exactly what had happened here.
+Faça o passo 1 primeiro. Um `CNAME` apontando para um domínio sem registros DNS
+faz o Pages redirecionar o site para um endereço que não resolve, o que tira o
+blog do ar — foi exatamente o que aconteceu aqui.
 
-## Writing a post
+## Escrevendo um post
 
-Add a file to `_posts/` named `YYYY-MM-DD-some-slug.markdown`:
+Crie um arquivo em `_posts/` com o nome `AAAA-MM-DD-um-slug.markdown`:
 
 ```yaml
 ---
 layout: post
-title: "Post title"
-image: /assets/images/something.png
-categories: [linux, networking]
+title: "Título do post"
+image: /assets/images/alguma-imagem.png
+categories: [linux, redes]
 tags: [debian, vpn]
 ---
 ```
 
-`layout: post` and `author: davi` are applied automatically by the `defaults:`
-block in `_config.yml`, so they can be omitted.
+`layout: post` e `author: davi` são aplicados automaticamente pelo bloco
+`defaults:` do `_config.yml`, então podem ser omitidos.
 
-- `categories` and `tags` drive `/categories.html` and `/tags.html`. Posts with
-  neither simply do not appear on those pages.
-- Adding `featured` to a post's `tags` puts it in the homepage sidebar; adding
-  `sticky` pins it to a banner on the homepage.
+- `categories` e `tags` alimentam `/categories.html` e `/tags.html`. Posts sem
+  nenhum dos dois simplesmente não aparecem nessas páginas.
+- A tag `featured` coloca o post na barra lateral da home; a tag `sticky` fixa
+  o post em um destaque no topo da home.
+
+## Idioma
+
+O site é escrito em português (`lang: pt-BR`). As datas são renderizadas pelo
+include `_includes/data-pt.html`, porque o filtro `date` do Liquid não tem
+suporte a locale e sempre emite os meses em inglês.

@@ -1,9 +1,9 @@
 ---
-title: "Home"
+title: "Início"
 layout: default
 pagination:
     enabled: true
-description: "This is just a blog."
+description: "Um blog sobre tecnologia, infraestrutura e desenvolvimento."
 ---
 
 
@@ -45,7 +45,7 @@ description: "This is just a blog."
                               
         </small>
         <small class="text-muted">
-            {{ latest_post.date | date: '%b %d, %Y' }}
+            {% include data-pt.html date=latest_post.date %}
         </small>
     </div>
     </div>
@@ -79,7 +79,7 @@ description: "This is just a blog."
                     </small>
                     {% endif %}
                     <small class="text-muted">
-                        {{ second_post.date | date: '%b %d, %Y' }}
+                        {% include data-pt.html date=second_post.date %}
                     </small>
                 </div>
             </div>
@@ -110,7 +110,7 @@ description: "This is just a blog."
                     </small>
                     {% endif %}
                     <small class="text-muted">
-                        {{ third_post.date | date: '%b %d, %Y' }}
+                        {% include data-pt.html date=third_post.date %}
                     </small>
                 </div>
             </div>
@@ -143,7 +143,7 @@ description: "This is just a blog."
                     {% endif %}
 
                     <small class="text-muted">
-                        {{ fourth_post.date | date: '%b %d, %Y' }}
+                        {% include data-pt.html date=fourth_post.date %}
                     </small>
                 </div>
             </div>
@@ -166,7 +166,7 @@ description: "This is just a blog."
                 <p class="mb-3 lead">
                     {{ post.excerpt | strip_html | strip_newlines | truncate: 136 }}
                 </p>
-                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">Read More</a>
+                <a href="{{site.baseurl}}{{post.url}}" class="btn btn-dark">Leia mais</a>
             </div>
             <div class="col-md-6 d-none d-md-block pr-0" style="background-size:cover;background-image:url({{ post.image | relative_url }});">	
             </div>
@@ -190,7 +190,7 @@ description: "This is just a blog."
    
     <div class="col-md-8 main-loop">
         
-        <h4 class="font-weight-bold spanborder"><span>All Stories</span></h4>
+        <h4 class="font-weight-bold spanborder"><span>Todas as publicações</span></h4>
         
 
         {% for post in paginator.posts %}
@@ -199,7 +199,7 @@ description: "This is just a blog."
         
         {% else %}
         
-            <p class="text-muted">No posts yet. Add a Markdown file to <code>_posts/</code> to publish the first one &mdash; see the README.</p>
+            <p class="text-muted">Ainda não há publicações. Adicione um arquivo Markdown em <code>_posts/</code> para publicar a primeira &mdash; veja o README.</p>
         
         {% endfor %}
         

@@ -20,7 +20,7 @@ author_key: "davi"
                 <img alt="{{ author.name }}" src="{{ author.avatar }}" class="rounded-circle" height="100" width="100">
             </div>
         </div>
-        <h4 class="font-weight-bold spanborder"><span>Posts by {{ author.name }}</span></h4>
+        <h4 class="font-weight-bold spanborder"><span>Publicações de {{ author.name }}</span></h4>
             {% assign posts = site.posts | where: "author", page.author_key %}
             {% for post in posts %}
             {% include main-loop-card.html %}
