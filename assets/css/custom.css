@@ -291,6 +291,14 @@ a.text-dark:hover, a.text-dark:focus { color: var(--accent) !important; }
   box-shadow: 0 0 0 .2rem rgb(var(--accent-rgb) / .35);
 }
 
+/* Footer note: sits under the footer's main row, separated by a hairline.
+   Kept narrow so it reads as a statement rather than a block of small print. */
+.footer-note {
+  border-top: 1px solid var(--border);
+  max-width: 46rem;
+  line-height: 1.6;
+}
+
 /* ---- the theme toggle ---- */
 #theme-toggle {
   background: none; border: 0; cursor: pointer; line-height: 1;
